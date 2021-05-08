@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Orders</title>
+    <title>CD Sales</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -20,10 +20,11 @@
         <h4>Will show the total amount sold for a salesperson for the entire year</h4>
         <label id="selectEmployeeLbl">
             choose an employee&nbsp;
-            <select id="selectEmployee" class="form-control" style="display: inline">
-                <option>SELECT</option>
+            <select id="selectEmployee" style="display: inline">
             </select>
         </label>
+        <input type="button" value="GetEmp" onclick="getEmpTotal()" />
+        <p id="empTotal"></p>
     </div>
     <br />
     <div>
@@ -31,10 +32,11 @@
         <h4>Will show the total amount sold for a salesperson for the entire year</h4>
         <label id="selectStoreLbl">
             choose a store&nbsp;
-            <select id="selectStore" class="form-control" style="display: inline">
-                <option>SELECT</option>
+            <select id="selectCity" style="display: inline">
             </select>
         </label>
+        <input type="button" value="GetCity" onclick="getCityTotal()" />
+        <p id="cityTotal"></p>
     </div>
 </body>
 </html>

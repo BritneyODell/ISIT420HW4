@@ -130,7 +130,10 @@
     <Compile Include="CDTable.cs">
       <DependentUpon>NodeOrders500.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\StoresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,7 +186,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Emplyee\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Views\Orders\" />
+    <Folder Include="Views\Stores\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
