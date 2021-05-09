@@ -48,3 +48,17 @@ function getCityTotal() {
         });
 }
 
+function getMarkups() {
+    $("#markupsList").empty();
+    $.getJSON("api/stores/GetMarkups")
+        .done(function (data) {
+            // On success, 'data' contains a list of the stores and the number of sales they made above $13
+            $('#markupsList').append(`<li><strong> [${data[0].city}], [${data[0].state}] is the top store, with [${data[0].count}] orders with ideal markups (over $13). </strong></li>`);
+            $('#markupsList').append(`<li> [${data[1].city}], [${data[1].state}] is tied for first with [${data[1].count}] orders. </li>`);
+            $('#markupsList').append(`<li> [${data[2].city}], [${data[2].state}] is after them with [${data[2].count}] orders. </li>`);
+            $('#markupsList').append(`<li> Next up is [${data[3].city}], [${data[3].state}] with the same [${data[3].count}] orders. </li>`);
+            $('#markupsList').append(`<li> And finally, [${data[4].city}], [${data[4].state}] comes fourth, with [${data[4].count}] orders. </li>`);
+            $('#markupsList').append(`<li> have a nice day :)</li>`);
+            console.log(data);
+        });
+}
